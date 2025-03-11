@@ -19,7 +19,6 @@ func mergeSort(array []float64) {
 func merge(array, leftArray, rightArray []float64) {
 	leftArrayLenght := len(leftArray)
 	rightArrayLenght := len(rightArray)
-
 	i, j, k := 0, 0, 0
 	for i < leftArrayLenght && j < rightArrayLenght {
 		if leftArray[i] < rightArray[j] {
@@ -31,13 +30,11 @@ func merge(array, leftArray, rightArray []float64) {
 		}
 		k++
 	}
-
 	for i < leftArrayLenght {
 		array[k] = leftArray[i]
 		i++
 		k++
 	}
-
 	for j < rightArrayLenght {
 		array[k] = rightArray[j]
 		j++
